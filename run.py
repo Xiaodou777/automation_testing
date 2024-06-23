@@ -10,7 +10,7 @@ import os
 import pytest
 from loguru import logger
 
-logger.add('./log/{time}.log', rotation='20 MB', retention='2 week', encoding='utf-8')
+logger.add('./log/{time}.log', rotation='20 MB', retention='4 week', encoding='utf-8')
 pytest.main(['-s', r"--alluredir=report/json", "--clean-alluredir"])
 os.system('allure generate ./report/json -o ./report/html -c')
 # pytest.main(['-s'])
