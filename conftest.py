@@ -31,7 +31,7 @@ def connect_mysql(request):
 
 @pytest.fixture(scope='session', autouse=True)
 def task_mark():
-    logger.debug("{:=^50}".format('测试任务开始'))
+    logger.debug("{:=^50}".format('测试任务start'))
     yield
     logger.debug("{:=^50}".format('测试任务结束'))
 
